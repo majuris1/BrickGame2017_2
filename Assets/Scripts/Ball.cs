@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour {
 
 
 	void Update () {
-		if(transform.position.y < -3.5f) {
+		if(transform.position.y < -4.0f) {
 			GetOut();
 		}
 		if(Input.GetButtonDown("Jump")) {
