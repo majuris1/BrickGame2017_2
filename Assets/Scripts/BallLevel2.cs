@@ -51,9 +51,9 @@ public class BallLevel2 : MonoBehaviour {
 		gameOverSign.SetActive(true);
 	}
 
-	public void YouBrokeABrick()
+	public void YouBrokeABrick(int worth)
 	{
-		points += 1;
+		points += worth;
 		pointsValue.text = points.ToString();
 
 		var bricksleft = FindObjectsOfType<BrickLevel2>().Length;
