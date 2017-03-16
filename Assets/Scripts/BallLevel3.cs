@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BallLevel2 : MonoBehaviour {
+public class BallLevel3 : MonoBehaviour {
 
 	public Vector2 startingVelocity = new Vector2(15, -20);
 	private Vector3 startingPosition;
@@ -23,7 +23,7 @@ public class BallLevel2 : MonoBehaviour {
 
 
 	void Update () {
-		if(transform.position.y < -3.3f) {
+		if(transform.position.y < -7.1f) {
 			GetOut();
 		}
 		if(Input.GetButtonDown("Jump")) {
@@ -56,7 +56,7 @@ public class BallLevel2 : MonoBehaviour {
 		points += 1;
 		pointsValue.text = points.ToString();
 
-		var bricksleft = FindObjectsOfType<BrickLevel2>().Length;
+		var bricksleft = FindObjectsOfType<BrickLevel3>().Length;
 		if(bricksleft == 0) {
 			youwinSign.SetActive(true);
 		}
